@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planiranje Izlet</title>
+</head>
+<body>
+    
+</body>
+<script>
+//unos podataka
+let ime = prompt("Unesite svoje ime:");
+let cijenaUlaznice = Number(prompt("Unesite cijenu jedne ulaznice u eurima:"));
+let brojUlaznica = Number(prompt("Unesite broj ulaznica:"));
+let budzet = Number(prompt("Unesite svoj budžet u eurima:"));
+
+//izracun i usporedbe
+let ukupnaCijena = cijenaUlaznice * brojUlaznica;
+let ostatakPara = budzet - ukupnaCijena;
+let dovoljno = (budzet >= ukupnaCijena) ? true : false;
+let tocanIznos = (budzet === ukupnaCijena) ? true : false;
+
+//ispis
+let nastavi = (confirm("Želite li nastaviti s planiranjem izleta?")) ? true : false;
+alert(
+    "Ime: " + ime + "\n" +
+    "Ukupni trosak: " + ukupnaCijena + " EUR\n" +
+    "Preostali iznos: " + ostatakPara + " EUR\n" +
+    "Dovoljno novca: " + dovoljno + "\n" +
+    "Tocan iznos: " + tocanIznos + "\n" +
+    "Nastavak planiranja: " + nastavi
+);
+</script>
+</html>
